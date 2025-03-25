@@ -8,7 +8,7 @@ class Client
     }
     
 }
-public class EqualsRunner {
+public class EqualsAndHashCodeRunner {
     public static void main(String[] args) {
         Client c1 = new Client(1);
         Client c2 = new Client(2);
@@ -19,11 +19,19 @@ public class EqualsRunner {
 
         
     }
+
     @Override
-    public boolean equals(Object obj) {
+    protected Object clone() throws CloneNotSupportedException {
         // TODO Auto-generated method stub
-        return super.equals(obj);
+        return super.clone();
     }
+
+    @Override
+    public int hashCode() {
+        // TODO Auto-generated method stub
+        return super.hashCode();
+    }
+
 }
 // false
 // true
