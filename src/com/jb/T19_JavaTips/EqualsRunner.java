@@ -14,6 +14,7 @@ public class EqualsRunner {
         Client c2 = new Client(2);
         Client c3 = new Client(1);
         System.out.println(c1.equals(c2)); // inhert object class
+        System.out.println(c1.equals(c1)); // compers object
         System.out.println(c1.equals(c3));
 
         
@@ -24,3 +25,6 @@ public class EqualsRunner {
         return super.equals(obj);
     }
 }
+// false
+// true
+// false
